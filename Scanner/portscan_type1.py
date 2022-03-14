@@ -3,6 +3,7 @@
 import socket
 
 socks = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # socket.AF_INET for ipv4 and socket.SOCK_STREAM for TCP
+socket.setdefaulttimeout(5) # Add a timeout to 5 seconds
 host = input("[+] Enter the HOST to scan: ")
 port = int(input(("[+] Enter the PORT to scan: ")))
 
