@@ -8,7 +8,6 @@ socket.setdefaulttimeout(3) # Add a timeout to 3 seconds
 host = input("[+] Enter the HOST to scan: ")
 lower_range = int(input("[+] Enter the lower range port: "))
 upper_range = int(input("[+] Enter the upper range port: "))
-# port = int(input(("[+] Enter the PORT to scan: ")))
 
 def portscan(port):
 	'''Checks if connection receives to the port receives an error'''
