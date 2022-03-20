@@ -1,4 +1,4 @@
-#AUTHOR: Piyush Aacharya (r3alix01)
+#AUTHOR: Piyush Acharya (r3alix01)
 
 import hashlib
 from requests import get
