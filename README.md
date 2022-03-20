@@ -1,6 +1,6 @@
-## PythonAdvancedScripts
+## Python Advanced Scripts
 
-Just some cool hacking scripts from python
+Just some cool security tools from python
 - Port Scanner
 - Password Cracker \ Hash Cracker
 - Hash Generator
