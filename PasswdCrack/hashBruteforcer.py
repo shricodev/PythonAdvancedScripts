@@ -34,7 +34,7 @@ for words in pass_file:
         digests = eval(_) # eval takes the string as input and executes the content.
 
         if user_hashes == digests:
-            print(f"[**] The decoded password is: {words}")
+            print(colored(f"[**] The decoded password is: {words}", 'green'))
             exit(0)
 
 print(f"[!!] No string matching the provided hash in the {wordlist} file")
