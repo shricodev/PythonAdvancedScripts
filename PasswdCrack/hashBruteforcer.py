@@ -1,6 +1,7 @@
 import hashlib
 from os import getcwd
 from platform import system
+from termcolor import colored
 
 def fileOpen(wordlist):
     global pass_file # global to use the variable outside of the function
@@ -14,7 +15,11 @@ def fileOpen(wordlist):
             print(f"[-] No Such file in the current directory: {getcwd()}\{wordlist}")
             exit(0)
 
-md5hash = input("[+] Enter the md5 hash to decode: ")
+print("#############################################################")
+print(colored("[*] Available Algorithms: md5, sha1, sha224, sha256, sha512", "cyan"))
+print("#############################################################")
+used_hashing = input("[+] Enter the Algorithm to Use: ").lower().strip()
+user_hashes = input("[+] Enter the hash to decode: ")
 wordlist = input("[+] Enter the list of password file: ")
 
 fileOpen(wordlist)
@@ -25,9 +30,10 @@ for words in pass_file:
     else:
         print("[-] Trying " + "'" + words.strip('\n') + "'")
         encodedWord = words.encode("utf-8")
-        md5digests = hashlib.md5(encodedWord.strip()).hexdigest()
+        _ = f"hashlib.{used_hashing}(encodedWord.strip()).hexdigest()"
+        digests = eval(_) # eval takes the string as input and executes the content.
 
-        if md5hash == md5digests:
+        if user_hashes == digests:
             print(f"[**] The decoded password is: {words}")
             exit(0)
 
