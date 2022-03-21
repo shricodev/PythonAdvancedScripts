@@ -8,8 +8,8 @@ def changeAddress(interface, mac_addr):
     and change the mac address on the interface provided by the user.
     '''
     subprocess.call(["ifconfig " + interface + "down"])
-    subprocess.call(["ifconfig" + interface + "hw" + "ether" + mac_addr]) # This is the line responsible for mac address change
-    subprocess.call(["ifconfig" + interface + "up"])
+    subprocess.call(["ifconfig " + interface + " hw " + "ether " + mac_addr]) # This is the line responsible for mac address change
+    subprocess.call(["ifconfig " + interface + " up"])
 
 
 def main():
