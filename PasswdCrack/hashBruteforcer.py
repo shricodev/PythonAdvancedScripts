@@ -30,8 +30,8 @@ for words in pass_file:
     else:
         print("[-] Trying " + "'" + words.strip('\n') + "'")
         encodedWord = words.encode("utf-8")
-        _ = f"hashlib.{used_hashing}(encodedWord.strip()).hexdigest()"
-        digests = eval(_) # eval takes the string as input and executes the content.
+        string_exec = f"hashlib.{used_hashing}(encodedWord.strip()).hexdigest()"
+        digests = eval(string_exec) # eval takes the string as input and executes the content.
 
         if user_hashes == digests:
             print(colored(f"[**] The decoded password is: {words}", 'green'))
