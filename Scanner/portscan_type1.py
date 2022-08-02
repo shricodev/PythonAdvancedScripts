@@ -1,4 +1,4 @@
-# AUTHOR: Piyush Acharya(~r3alix01)
+# AUTHOR: Shrijal Acharya(~YuShx01)
 
 import socket
 from termcolor import colored
